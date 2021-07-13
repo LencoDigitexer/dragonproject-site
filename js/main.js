@@ -39,6 +39,7 @@ $(document).ready(()=>{
   $.get(`https://mcapi.us/server/status?ip=${ip}&port=${port}`, (result)=>{
     if (result.online) {
       $(".sip").html(result.players.now);
+	  $(".player").html(result.players.sample[0].name);
     } else {
       $(".playercount").html("Server isn't online!");
     }
@@ -48,6 +49,7 @@ $(document).ready(()=>{
     $.get(`https://mcapi.us/server/status?ip=${ip}&port=${port}`, (result)=>{
       if (result.online) {
         $(".sip").html(result.players.now);
+		$(".player").html(result.players.sample[0].name);
       } else {
         $(".playercount").html("Server isn't online!");
       }
